@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(to right, #f8fbff, #cfe4f7);
+
+}
+
+.container {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #357ab8;
+}
+
+#keyboard {
+  font-size: 0.95rem;
+  background: #eef2f5;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+code {
+  background: #ddd;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.cube-output {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+svg {
+  margin-bottom: 10px;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+#move-display {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #444;
+}
+
+#current-move {
+  font-weight: bold;
+  color: #e67e22;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+#move-history {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 20px;
+  width: 100%;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+#move-history strong {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+#move-sequence {
+  margin-top: 8px;
+  font-family: monospace;
+  font-size: 1rem;
+  color: #555;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+button.reset {
+  background-color: #7f8c8d;
+}
+
+button.reset:hover {
+  background-color: #626e70;
+}

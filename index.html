@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rubik's Cube Solver</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>🧊 Rubik's Cube Solver</h1>
+    <p class="description">Simulate, scramble, and solve a 3x3 Rubik's Cube using a beginner-friendly algorithm. Use the keyboard or buttons below.</p>
+
+    <div class="controls">
+      <button id="scramble-btn" onclick="scramble()">🔀 Scramble</button>
+      <button id="solve-btn" onclick="solveCube()">✅ Solve (Layer-by-layer)</button>
+      <button id="reset-btn" onclick="solveReversely()">↩️ Reverse Solve</button>
+    </div>
+    <button class="reset" onclick="resetCube()">🧼 Reset to Solved</button>
+
+
+    <div id="keyboard">
+      <strong>Keyboard Shortcuts:</strong><br/>
+      <span>Clockwise: <code>f</code> <code>r</code> <code>u</code> <code>l</code> <code>d</code> <code>b</code></span> |
+      <span>Counter-clockwise: <code>F</code> <code>R</code> <code>U</code> <code>L</code> <code>D</code> <code>B</code></span>
+    </div>
+
+    <div id="move-display">
+      <strong>Current Move:</strong> <span id="current-move">—</span>
+    </div>
+
+    <div id="output" class="cube-output"></div>
+
+    <div id="move-history">
+      <strong>Full Move Sequence:</strong>
+      <pre id="move-sequence">—</pre>
+    </div>
+
+    <footer>
+      <p>Built for Internship Challenge · <span>JS | OOP | Algorithms</span></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Add reverse solve handler
+    function solveReversely() {
+      if (!scrambleMoves.length) {
+        alert("Please scramble the cube first.");
+        return;
+      }
+
+      const reversed = reverseMoves(scrambleMoves);
+      document.getElementById("move-sequence").textContent = reversed.join(' ');
+      animateMoves(reversed, 500);
+    }
+  </script>
+</body>
+</html>
