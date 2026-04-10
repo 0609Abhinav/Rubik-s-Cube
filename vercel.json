@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd cube-solver && npm install && npm run build",
+  "outputDirectory": "cube-solver/build",
+  "installCommand": "echo 'skip root install'",
+  "framework": null
+}
