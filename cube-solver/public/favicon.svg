@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0a2e"/>
+      <stop offset="100%" style="stop-color:#0a0a18"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <rect width="64" height="64" rx="14" fill="none" stroke="rgba(139,92,246,0.6)" stroke-width="1.5"/>
+
+  <!-- 3x3 Rubik's cube net — front face centered -->
+  <!-- Row 1 -->
+  <rect x="10" y="10" width="13" height="13" rx="3" fill="#ef4444" filter="url(#glow)"/>
+  <rect x="25.5" y="10" width="13" height="13" rx="3" fill="#f97316" filter="url(#glow)"/>
+  <rect x="41" y="10" width="13" height="13" rx="3" fill="#fbbf24" filter="url(#glow)"/>
+
+  <!-- Row 2 -->
+  <rect x="10" y="25.5" width="13" height="13" rx="3" fill="#22c55e" filter="url(#glow)"/>
+  <rect x="25.5" y="25.5" width="13" height="13" rx="3" fill="#8b5cf6" filter="url(#glow)"/>
+  <rect x="41" y="25.5" width="13" height="13" rx="3" fill="#3b82f6" filter="url(#glow)"/>
+
+  <!-- Row 3 -->
+  <rect x="10" y="41" width="13" height="13" rx="3" fill="#f8f8f2" filter="url(#glow)"/>
+  <rect x="25.5" y="41" width="13" height="13" rx="3" fill="#10b981" filter="url(#glow)"/>
+  <rect x="41" y="41" width="13" height="13" rx="3" fill="#f43f5e" filter="url(#glow)"/>
+
+  <!-- Highlight gloss on each sticker -->
+  <rect x="11" y="11" width="5" height="4" rx="1.5" fill="rgba(255,255,255,0.25)"/>
+  <rect x="26.5" y="11" width="5" height="4" rx="1.5" fill="rgba(255,255,255,0.25)"/>
+  <rect x="42" y="11" width="5" height="4" rx="1.5" fill="rgba(255,255,255,0.25)"/>
+  <rect x="11" y="26.5" width="5" height="4" rx="1.5" fill="rgba(255,255,255,0.25)"/>
+  <rect x="26.5" y="26.5" width="5" height="4" rx="1.5" fill="rgba(255,255,255,0.25)"/>
+  <rect x="42" y="26.5" width="5" height="4" rx="1.5" fill="rgba(255,255,255,0.25)"/>
+  <rect x="11" y="42" width="5" height="4" rx="1.5" fill="rgba(255,255,255,0.25)"/>
+  <rect x="26.5" y="42" width="5" height="4" rx="1.5" fill="rgba(255,255,255,0.25)"/>
+  <rect x="42" y="42" width="5" height="4" rx="1.5" fill="rgba(255,255,255,0.25)"/>
+</svg>
