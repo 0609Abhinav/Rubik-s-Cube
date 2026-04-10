@@ -2,16 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <!-- SVG favicon — shows the Rubik's cube icon in browser tab -->
-    <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/favicon.svg" />
-    <!-- Fallback .ico for older browsers -->
-    <link rel="alternate icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- Favicon — SVG (modern) + ICO (fallback) with cache-bust -->
+    <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/favicon.svg?v=2" />
+    <link rel="icon" type="image/x-icon" href="%PUBLIC_URL%/favicon.ico?v=2" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico?v=2" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#05050d" />
     <meta name="description" content="CubeSolver — 3×3 Rubik's Cube Solver powered by Kociemba's two-phase algorithm. Solves any valid state in ≤22 moves." />
     <meta property="og:title" content="CubeSolver" />
     <meta property="og:description" content="Real Rubik's Cube solver using Kociemba's algorithm. Solves any state in ≤22 moves." />
-    <meta property="og:image" content="%PUBLIC_URL%/favicon.svg" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!--
