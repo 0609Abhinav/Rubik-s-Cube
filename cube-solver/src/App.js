@@ -3,6 +3,7 @@ import CubeNet from './components/CubeNet';
 import Controls from './components/Controls';
 import MoveHistory from './components/MoveHistory';
 import StatusBar from './components/StatusBar';
+import TouchPad from './components/TouchPad';
 import { CubeState, generateScramble, invertMove } from './engine/CubeState';
 import './index.css';
 
@@ -264,7 +265,8 @@ export default function App() {
             </div>
           </div>
 
-          <div className="key-row glass">
+          {/* Keyboard hints — desktop only */}
+          <div className="key-row glass desktop-only">
             {[
               {k:'U', label:'Up',    inv:'U\''},
               {k:'R', label:'Right', inv:'R\''},
@@ -282,6 +284,11 @@ export default function App() {
                 <kbd>{k}</kbd>
               </div>
             ))}
+          </div>
+
+          {/* Touch pad — mobile only */}
+          <div className="mobile-only">
+            <TouchPad onMove={applyManualMove} disabled={isPlaying} />
           </div>
         </section>
 
